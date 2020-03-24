@@ -39,7 +39,7 @@ def send_tweets(c_socket):
     auth.set_access_token(access_token, access_secret)
     
     twitter_stream = Stream(auth, TweetStreamListener(c_socket))
-    twitter_stream.filter(track=['Corona'])
+    twitter_stream.filter(languages=["nl"], track=['de', 'het', 'een', 'is', 'ben', 'zijn', 'word', 'werd'])
 
 
 server_socket = socket.socket()
